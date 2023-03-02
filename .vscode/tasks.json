@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "project1",
+			"problemMatcher": [],
+			"label": "npm: dev - project1",
+			"detail": "vite",
+			"runOptions": {
+                "runOn": "folderOpen"
+            }
+		}
+	]
+}
