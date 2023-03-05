@@ -9,8 +9,17 @@
 			"label": "npm: dev - project1",
 			"detail": "vite",
 			"runOptions": {
-                "runOn": "folderOpen"
-            }
-		}
+				"runOn": "folderOpen"
+			}
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "project1",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - project1",
+			"detail": "vite build"
+		},
 	]
 }

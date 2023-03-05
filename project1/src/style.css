@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* кастомные сбросы стилей: */
+@layer base {
+
+}
+
+/* кастомные классы: */
+@layer components {
+  .my-custome-class {
+    @apply bg-slate-700;
+  }
+
+}
