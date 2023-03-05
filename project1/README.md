@@ -1,4 +1,5 @@
 # vue_options_variant
 
-одна страница на vue (из проэкта zakup)
+проэкт zakup на Vue.js
 используется синтаксис скриптов типа "options"  
+маршрутизация страниц через Vue Router
