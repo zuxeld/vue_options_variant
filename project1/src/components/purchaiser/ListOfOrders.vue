@@ -86,7 +86,7 @@ export default {
       <!-- list of macro-orders: (grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1)-->
       <section class="grid grid-cols-1 gap-6">
 
-        <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
+        <div class="flex items-center gap-1 justify-between border border-slate-600 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
           <div class="flex-grow">
             <p class="text-xl">24.02.2023</p>
             <p class="text-lg">Алексей</p>
@@ -100,7 +100,7 @@ export default {
         <!-- split line: -->
         <div class="border-t border-black mx-6"></div>
 
-        <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
+        <div class="flex items-center gap-1 justify-between border border-slate-600 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
           <div class="flex-grow">
             <p class="text-xl">23.02.2023</p>
             <p class="text-lg">Алексей</p>
@@ -111,7 +111,7 @@ export default {
           </div>
         </div>
 
-        <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
+        <div class="flex items-center gap-1 justify-between border border-slate-600 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
           <div class="flex-grow">
             <p class="text-xl">22.02.2023</p>
             <p class="text-lg">Алексей</p>
@@ -122,7 +122,7 @@ export default {
           </div>
         </div>
 
-        <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
+        <div class="flex items-center gap-1 justify-between border border-slate-600 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
           <div class="flex-grow">
             <p class="text-xl">21.02.2023</p>
             <p class="text-lg">Алексей</p>
