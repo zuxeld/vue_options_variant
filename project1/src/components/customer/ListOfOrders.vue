@@ -131,52 +131,6 @@ export default {
         
       </template>
       
-      <!-- <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
-        <div class="flex-grow">
-          <p class="text-xl">24.02.2023</p>
-          <p class="text-lg">Алексей</p>
-        </div>
-        <div class="border-l-[1px] border-l-slate-200 min-w-[90px]">
-          <p class="font-bold text-right">AMD:</p>
-          <p class="text-right">~4500</p>
-        </div>
-      </div>
-  
-      split line:
-      <div class="border-t border-black mx-6"></div>
-  
-      <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
-        <div class="flex-grow">
-          <p class="text-xl">23.02.2023</p>
-          <p class="text-lg">Алексей</p>
-        </div>
-        <div class="border-l-[1px] border-l-slate-200 min-w-[90px]">
-          <p class="font-bold text-right">AMD:</p>
-          <p class="text-right">~5950</p>
-        </div>
-      </div>
-  
-      <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
-        <div class="flex-grow">
-          <p class="text-xl">22.02.2023</p>
-          <p class="text-lg">Алексей</p>
-        </div>
-        <div class="border-l-[1px] border-l-slate-200 min-w-[90px]">
-          <p class="font-bold text-right">AMD:</p>
-          <p class="text-right">~5200</p>
-        </div>
-      </div>
-  
-      <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
-        <div class="flex-grow">
-          <p class="text-xl">21.02.2023</p>
-          <p class="text-lg">Алексей</p>
-        </div>
-        <div class="border-l-[1px] border-l-slate-200 min-w-[90px]">
-          <p class="font-bold text-right">AMD:</p>
-          <p class="text-right">~57400</p>
-        </div>
-      </div> -->
   
     </section>
   
