@@ -20,7 +20,17 @@ export default {
     
   },
   computed: {
-    
+    changingOrder() {
+      if (this.$store.state.changingOrderId !== 'new') {
+        return this.$store.state.listOfItems.find(item => item.id === this.$store.state.changingOrderId);
+      }
+      return {
+        id: 'new',
+        date: this.$store.state.currentDate,
+        purchaiserName: '???',
+        theoreticalPrice: 0
+      }
+    } 
   },
   methods: {
     
@@ -61,12 +71,12 @@ export default {
     <!-- header of order:-->
     <header class="flex items-center gap-1 justify-between  group px-5 pt-3 pb-4"> 
       <div class="flex-grow">
-        <p class="text-xl">24.02.2023</p>
-        <input type="text" value="Алексей" class="pl-2 -translate-x-2 w-full  rounded-md text-lg group-hover:bg-slate-100 outline-2 outline-sky-500 outline-offset-0">
+        <p class="text-xl">{{ changingOrder.date }}</p>
+        <input type="text" :value="changingOrder.purchaiserName" class="pl-2 -translate-x-2 w-full  rounded-md text-lg group-hover:bg-slate-100 outline-2 outline-sky-500 outline-offset-0">
       </div>
       <div class="border-l-[1px] border-l-slate-200 min-w-[90px]">
         <p class="font-bold text-right">AMD:</p>
-        <p class="text-right">~10200</p>
+        <p class="text-right">~{{ changingOrder.theoreticalPrice }}</p>
       </div>
     </header>
     

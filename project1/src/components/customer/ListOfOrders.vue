@@ -10,29 +10,6 @@ export default {
   },
   data() {
     return {
-      listOfItems: [
-        {
-          date: '24.02.2023',
-          purchaiserName: 'Алексей',
-          theoreticalPrice: 4500
-        },
-        {
-          date: '23.02.2023',
-          purchaiserName: 'Алексей',
-          theoreticalPrice: 5950
-        },
-        {
-          date: '22.02.2023',
-          purchaiserName: 'Алексей',
-          theoreticalPrice: 5200
-        },
-        {
-          date: '21.02.2023',
-          purchaiserName: 'Алексей',
-          theoreticalPrice: 57400
-        },
-      ],
-      currentDate: '24.02.2023',
       filterString: '',
     }
   },
@@ -44,13 +21,20 @@ export default {
   },
   computed: {
     filtredListOfItem() {
-      if (this.filterString === '') return this.listOfItems;
-      return [...this.listOfItems].filter(item => item.date.includes(this.filterString))
+      if (this.$store.state.filterString === '') return this.$store.state.listOfItems;
+      return [...this.$store.state.listOfItems].filter(item => item.date.includes(this.filterString))
     } 
 
   },
   methods: {
-    
+    createOder() {
+      this.$store.commit('setChangingOrderId', 'new')
+      this.$router.push('/customer/order')
+    },
+    changeOder(event, id) {
+      this.$store.commit('setChangingOrderId', id)
+      this.$router.push('/customer/order')
+    }
   },
 
 }
@@ -93,7 +77,7 @@ export default {
       type="search" name="search_input" id="search" placeholder="search:" list="search_item" autocomplete="off" form="searc_form">
   
       <datalist id="search_item" class="min-w-[400px]">
-        <option v-for="item in this.listOfItems" :value="item.date">{{ item.date }}</option>
+        <option v-for="item in this.$store.state.listOfItems" :value="item.date">{{ item.date }}</option>
       </datalist>
   
       <button class="h-9 px-3 ml-1  border border-lime-700 bg-lime-600 text-white rounded-r-lg shadow shadow-lime-600 text-sm
@@ -107,7 +91,7 @@ export default {
     <!-- list of macro-orders: (grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1)-->
     <section class="grid grid-cols-1 gap-6">
   
-      <button @click.left="this.$router.push('/customer/order')" class="flex items-center justify-center mx-4 max-h-16 min-h-[64px]  border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow ">
+      <button @click.left="createOder" class="flex items-center justify-center mx-4 max-h-16 min-h-[64px]  border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow ">
         <svg width="28" height="28" viewBox="0 0 28 28">
           <use xlink:href="../../assets/icons.svg#dark_plus"></use>
         </svg>
@@ -115,7 +99,7 @@ export default {
 
   
       <template v-for="item in filtredListOfItem">
-        <div class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
+        <div @click.left="changeOder($event, item.id)" class="flex items-center gap-1 justify-between border border-slate-300 hover:bg-slate-100 active:bg-slate-300 rounded-lg shadow px-5 py-3"> 
           <div class="flex-grow">
             <p class="text-xl">{{ item.date }}</p>
             <p class="text-lg">{{ item.purchaiserName }}</p>
@@ -127,7 +111,7 @@ export default {
         </div>
 
         <!-- split line: -->
-        <div v-if="item.date == this.currentDate" class="border-t border-black mx-6"></div>
+        <div v-if="item.date == this.$store.state.currentDate" class="border-t border-black mx-6"></div>
         
       </template>
       
